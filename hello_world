@@ -1,0 +1,24 @@
+from selenium import webdriver
+
+
+driver = webdriver.Chrome('C:\Chrome Driver\chromedriver.exe')
+#driver.get('http://dowellcomputer.com/member/memberLoginForm.jsp')
+driver.get('https://www.daum.net/')
+'''
+id = "99991"
+pw = "99991"
+
+driver.find_element_by_name('memberID').send_keys(id)
+driver.find_element_by_name('memberPassword').send_keys(pw)
+
+#F12/오른쪽마우스/Copy/Copy xpath
+driver.find_element_by_xpath('//*[@id="blackBox"]/input[1]').click()
+print("Hello World")
+print(driver.current_url)
+'''
+########################################################
+search_word = "김밥"
+driver.find_element_by_name('q').send_keys(search_word)
+driver.find_element_by_xpath('//*[@id="daumSearch"]/fieldset/div/div/button[2]').click()
+now = driver.current_url
+print(now)
